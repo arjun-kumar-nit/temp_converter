@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1 id="head">Temprature Converter</h1>
+    <div id="container">
+
+        <label>Kelvin(K):<h1 id="kelvin">273.15</h1></label>
+        <label>Fahrenheit(F):<h1 id="fahren">32</h1></label>
+        <br>
+        <form>
+            <label>Celsius(C):<input oninput="myfun()" id="inp" type="number"/></label>
+
+        </form>
+    </div>
+</body>
+<script>
+    function myfun() {
+        var celsius = 0;
+        celsius = document.getElementById("inp").value;
+        var kelv = document.getElementById("kelvin");
+        var fahren = document.getElementById("fahren");
+        var kel = parseInt(celsius) + 273.15;
+        var fah = ((9 / 5) * celsius) + 32;
+        var kelvin = Math.floor(kel);
+        var forien = Math.floor(fah)
+        kelv.innerHTML = kel;
+        fahren.innerHTML = forien;
+    }
+</script>
+
+</html>
